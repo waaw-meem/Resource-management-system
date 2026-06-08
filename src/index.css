@@ -1,13 +1,261 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+  /* =========================
+     BACKGROUNDS
+  ========================= */
+
+  --bg-default: #f8fafc;
+  --bg-primary: #0a0a8f;
+  --bg-secondary: #8a1ad4;
+  --bg-light-blue: #eef2ff;
+
+  /* =========================
+     TEXT
+  ========================= */
+
+  --text-primary: #1e293b;
+  --text-secondary: #64748b;
+  --text-white: #ffffff;
+
+  --text-blue: #0a0a8f;
+  --text-purple: #8a1ad4;
+  --text-green: #15803d;
+  --text-yellow: #7c6a00;
+
+  /* =========================
+     BORDERS
+  ========================= */
+
+  --border-1: #e2e8f0;
+  --border-2: #d1d5db;
+  --border-3: #cbd5e1;
+  --border-4: #bfc8d4;
+  --border-dark: #1f2937;
+
+  --border-blue: #0ea5e9;
+  --border-primary: #0a0a8f;
+  --border-purple: #8a1ad4;
+  --border-green: #22c55e;
+  --border-yellow: #d6cf96;
+
+  /* =========================
+     BUTTONS
+  ========================= */
+
+  --btn-primary: #0a0a8f;
+  --btn-primary-hover: #070770;
+
+  --btn-secondary: #8a1ad4;
+  --btn-secondary-hover: #6f11af;
+
+  --btn-tertiary: #111827;
+  --btn-tertiary-hover: #000000;
+
+  --btn-light-blue: #e8e9ff;
+  --btn-light-gray: #f1f5f9;
+  --btn-light-green: #dcfce7;
+  --btn-light-yellow: #f5f5dc;
+
+  /* =========================
+     SEMANTIC
+  ========================= */
+
+  --success: #14b8a6;
+  --warning: #ffb300;
+  --danger: #ff0000;
+  --info: #4361ee;
+
+  /* =========================
+     CARDS
+  ========================= */
+
+  --card-bg: #ffffff;
+  --card-dark: #111827;
+
+  /* =========================
+     RADIUS
+  ========================= */
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+
+  /* =========================
+     SHADOWS
+  ========================= */
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, .05);
+
+  --shadow-md:
+    0 4px 12px rgba(0, 0, 0, .08);
+
+  --shadow-lg:
+    0 8px 24px rgba(0, 0, 0, .12);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+}
+
+/* Backgrounds */
+
+.bg-default {
+  background: var(--bg-default);
+}
+
+.bg-primary {
+  background: var(--bg-primary);
+}
+
+.bg-secondary {
+  background: var(--bg-secondary);
+}
+
+.bg-light-blue {
+  background: var(--bg-light-blue);
+}
+
+/* Text */
+
+.text-primary {
+  color: var(--text-primary);
+}
+
+.text-secondary {
+  color: var(--text-secondary);
+}
+
+.text-white {
+  color: var(--text-white);
+}
+
+.text-blue {
+  color: var(--text-blue);
+}
+
+.text-purple {
+  color: var(--text-purple);
+}
+
+.text-green {
+  color: var(--text-green);
+}
+
+.text-yellow {
+  color: var(--text-yellow);
+}
+
+/* Borders */
+
+.border-default {
+  border: 1px solid var(--border-1);
+}
+
+.border-primary {
+  border: 1px solid var(--border-primary);
+}
+
+.border-purple {
+  border: 1px solid var(--border-purple);
+}
+
+.border-green {
+  border: 1px solid var(--border-green);
+}
+
+.border-blue {
+  border: 1px solid var(--border-blue);
+}
+
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-1);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+}
+
+.card-dark {
+  background: var(--card-dark);
+  color: white;
+}
+
+.btn {
+  border: none;
+  cursor: pointer;
+  border-radius: var(--radius-md);
+  padding: 12px 20px;
+  font-weight: 600;
+  transition: all .2s ease;
+}
+
+/* Primary */
+
+.btn-primary {
+  background: var(--btn-primary);
+  color: white;
+}
+
+.btn-primary:hover {
+  background: var(--btn-primary-hover);
+}
+
+/* Secondary */
+
+.btn-secondary {
+  background: var(--btn-secondary);
+  color: white;
+}
+
+.btn-secondary:hover {
+  background: var(--btn-secondary-hover);
+}
+
+/* Tertiary */
+
+.btn-tertiary {
+  background: var(--btn-tertiary);
+  color: white;
+}
+
+/* Light */
+
+.btn-light-blue {
+  background: var(--btn-light-blue);
+  color: var(--text-blue);
+}
+
+.btn-light-green {
+  background: var(--btn-light-green);
+  color: var(--text-green);
+}
+
+.btn-light-yellow {
+  background: var(--btn-light-yellow);
+  color: var(--text-yellow);
+}
+
+.alert-success {
+  background: #ccfbf1;
+  color: #0f766e;
+}
+
+.alert-warning {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.alert-danger {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.alert-info {
+  background: #dbeafe;
+  color: #1d4ed8;
 }

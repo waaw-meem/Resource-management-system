@@ -1,0 +1,137 @@
+.left-container {
+    height: 100vh;
+    background-image: url("../../assets/images/login_banner.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main-container {
+    min-height: 100vh;
+}
+
+.logo img {
+    width: 210px;
+    height: 60px;
+}
+
+.input-fields {
+    width: 100%;
+    max-width: 400px;
+}
+
+.input-group-custom {
+    margin-bottom: 16px;
+}
+
+.input-group-custom label {
+    display: block;
+    margin-bottom: 12px;
+    color: #252525;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.input-wrapper {
+    position: relative;
+}
+
+.svg {
+    position: absolute;
+    top: 25%;
+    right: 5%;
+    cursor: pointer;
+}
+
+.input-wrapper input {
+    width: 100%;
+    padding: 14px 55px 14px 14px;
+    border: 1px solid #d9d9d9;
+    border-radius: 10px;
+    background: #ffffff;
+    color: #4b4b4b;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+.input-wrapper input::placeholder {
+    color: #5f5f5f;
+}
+
+.input-wrapper input:focus {
+    border-color: #0a0a8f;
+}
+
+.input-wrapper i {
+    position: absolute;
+    top: 50%;
+    right: 22px;
+    transform: translateY(-50%);
+    color: #4d4d4d;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-input {
+    display: none;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    color: #4b5563;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.checkbox-custom {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    background: #ffffff;
+    border: 2px solid #d1d5db;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+.checkbox-input:checked+.checkbox-label .checkbox-custom {
+    background: #0a0a8f;
+    border-color: #0a0a8f;
+}
+
+.checkbox-input:checked+.checkbox-label .checkbox-custom::after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 6px;
+    width: 5px;
+    height: 10px;
+    border: solid #ffffff;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.login-link {
+    color: #03045e;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 22px;
+    text-decoration: none;
+}
+
+.login-link:hover {
+    text-decoration: underline;
+}
+
+.login-btn {
+    width: 100%;
+    margin-top: 30px;
+    transition: all 0.75s ease;
+}
