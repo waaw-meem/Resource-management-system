@@ -241,8 +241,8 @@ body {
 }
 
 .alert-success {
-  background: #ccfbf1;
-  color: #0f766e;
+  background: #0f766e;
+  color: #fff;
 }
 
 .alert-warning {

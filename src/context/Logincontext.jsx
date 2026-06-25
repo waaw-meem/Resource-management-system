@@ -43,7 +43,7 @@ function Provider({ children }) {
 
             setTimeout(() => {
                 navigate('/dashboard');
-            }, 2000);
+            }, 3000);
         } else {
            
             setAlert({

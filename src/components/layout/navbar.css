@@ -1,0 +1,132 @@
+.img-fluid {
+    width: 120px;
+    height: 100%
+}
+
+.custom-navbar {
+    gap: 20px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #555;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 8px 12px !important;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    background-color: #f1f1f1;
+    color: #0d6efd;
+}
+
+.active-link {
+    background-color: #EAEAFF !important;
+    color: #03045E !important;
+    font-weight: 600 !important;
+}
+
+.notification-icon-box {
+    position: relative;
+    width: 50px;
+}
+
+.notification-icon {
+    width: 24px;
+    height: 24px;
+}
+
+.notification-icon-box .notification-counter {
+    position: absolute;
+    top: 0;
+    right: 15px;
+    background-color: #ff0000;
+    color: #fff;
+    width: 12px;
+    border-radius: 50%;
+    height: 12px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    font-size: 12px;
+}
+
+.notification-icon-box::after {
+    content: "";
+    background: #D1D1D1;
+    position: absolute;
+    height: 100%;
+    width: 3px;
+    right: 0;
+    border-radius: 10px;
+}
+
+.right-container {
+    flex: 0 0 250px;
+}
+
+.profile-container p {
+    margin: 0;
+}
+
+.navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.menu-toggle {
+    display: none;
+    border: none;
+    background: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #03045E;
+}
+
+
+@media (max-width: 768px) {
+
+    .navbar-container {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .menu-toggle {
+        display: block;
+        order: 2;
+    }
+
+    .image-container {
+        order: 1;
+    }
+
+    .right-container {
+        order: 3;
+        width: 100%;
+        justify-content: center !important;
+    }
+
+    .custom-navbar {
+        display: none;
+        order: 4;
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+
+    .custom-navbar.mobile-menu-open {
+        display: flex;
+    }
+
+    .nav-link {
+        width: 100%;
+        text-align: center;
+    }
+}

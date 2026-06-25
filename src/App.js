@@ -1,4 +1,4 @@
-import Button from "./components/Button";
+import Button from "./components/common/Button";
 import Login from "./pages/Auth/Login";
 import { Routes, Route } from "react-router-dom";
 import Dashboard from "./pages/Dashboard/Dashboard";

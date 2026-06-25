@@ -1,0 +1,40 @@
+.config-card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.configuration-container{
+    padding: 20px 0;
+}
+
+h2.secondary-heading {
+    font-weight: 600;
+    margin-bottom: 20px;
+    position: relative;
+    padding-left: 20px;
+}
+
+h2.secondary-heading::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 4px;
+    border-radius: 10px;
+    background: #03045E;
+    left: 0;
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+    .config-card-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .config-card-container {
+        grid-template-columns: 1fr;
+    }
+}

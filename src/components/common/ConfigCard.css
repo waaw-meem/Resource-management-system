@@ -1,0 +1,41 @@
+.config-card {
+    width: 100%;
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.08);
+    border-bottom: 6px solid #05056F;
+}
+
+.config-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.config-card-icon {
+    flex-shrink: 0;
+}
+
+.config-card-icon img {
+    width: 56px;
+    height: 56px;
+    object-fit: contain;
+}
+
+.config-card-content h5 {
+    margin: 0 0 6px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #252525;
+}
+
+.config-card-content p {
+    margin: 0;
+    font-size: 14px;
+    color: #666;
+}

@@ -1,13 +1,13 @@
 import React from 'react'
 import { Link } from "react-router-dom";
 import useLoginContext from "../../hooks/useLoginContext"
-import Alert from '../../components/Alert';
+import Alert from '../../components/common/Alert';
 
 import "./login.css"
 import Logo from "../../assets/images/Logo-RMS.png"
 import User from "../../assets/svg/User.svg"
 import Eye from "../../assets/svg/Eye.svg"
-import Button from '../../components/Button';
+import Button from '../../components/common/Button';
 
 const Login = () => {
 
@@ -34,8 +34,6 @@ const Login = () => {
     return (
 
         <div className="container-fluid logo-container">
-
-
             <div className='row h-100'>
 
                 <div className="col-6 left-container"></div>
