@@ -1,5 +1,5 @@
 .profile-dropdown {
-    width: 300px;
+    width: 180px;
     background: #fff;
     border-radius: 28px;
     padding: 20px;
@@ -19,7 +19,7 @@
 }
 
 .dropdown-title {
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 500;
     color: #2c2c2c;
 }
@@ -28,7 +28,7 @@
     display: flex;
     align-items: center;
     gap: 18px;
-    padding: 18px 0;
+    padding: 8px 0;
     cursor: pointer;
     transition: all 0.3s ease;
 }
@@ -45,7 +45,7 @@
 }
 
 .dropdown-item span:last-child {
-    font-size: 22px;
+    font-size: 14px;
     font-weight: 500;
 }
 
@@ -54,8 +54,8 @@
 .toggle-switch {
     position: relative;
     display: inline-block;
-    width: 58px;
-    height: 30px;
+    width: 48px;
+    height: 20px;
 }
 
 .toggle-switch input {
@@ -76,21 +76,21 @@
 .toggle-slider::before {
     content: "";
     position: absolute;
-    width: 24px;
-    height: 24px;
+    width: 14px;
+    height: 14px;
     left: 3px;
     top: 3px;
     background: #fff;
     border-radius: 50%;
     transition: all 0.3s ease;
-    box-shadow: 0 2px 6px rgba(0,0,0,.2);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, .2);
 }
 
-.toggle-switch input:checked + .toggle-slider {
+.toggle-switch input:checked+.toggle-slider {
     background: #05056F;
 }
 
-.toggle-switch input:checked + .toggle-slider::before {
+.toggle-switch input:checked+.toggle-slider::before {
     transform: translateX(28px);
 }
 

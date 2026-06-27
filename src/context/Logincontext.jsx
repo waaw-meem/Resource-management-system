@@ -7,10 +7,10 @@ const LoginContext = createContext()
 function Provider({ children }) {
     const navigate = useNavigate();
 
-    const [alert,setAlert] = useState({
-        show:false,
-        message:"",
-        variant:'success'
+    const [alert, setAlert] = useState({
+        show: false,
+        message: "",
+        variant: 'success'
     })
 
     const [showPassword, setShowPassword] = useState(false)
@@ -29,27 +29,30 @@ function Provider({ children }) {
             formData.username === 'admin@admin.com'
             && formData.password === 'admin123') {
             if (formData.rememberMe === true) {
+                sessionStorage.setItem("isAuthenticated", "true");
                 sessionStorage.setItem('name', formData.username)
                 sessionStorage.setItem('password', formData.password)
             }
+            localStorage.setItem("isAuthenticated", "true");
+
             localStorage.setItem('name', formData.username)
             localStorage.setItem('password', formData.password)
 
             setAlert({
-                show:true,
-                message:"LOGIN SUCCESS!",
-                variant:"success"
+                show: true,
+                message: "LOGIN SUCCESS!",
+                variant: "success"
             })
 
             setTimeout(() => {
                 navigate('/dashboard');
             }, 3000);
         } else {
-           
+
             setAlert({
-                show:true,
-                message:"LOGIN FAILED!",
-                variant:"danger"
+                show: true,
+                message: "LOGIN FAILED!",
+                variant: "danger"
             })
 
         }
@@ -60,6 +63,21 @@ function Provider({ children }) {
         setShowPassword(!showPassword)
     }
 
+    const logoutUser = () => {
+        localStorage.removeItem('name')
+        localStorage.removeItem('password')
+        sessionStorage.removeItem('name')
+        sessionStorage.removeItem('password')
+        sessionStorage.removeItem("isAuthenticated");
+
+        navigate('/')
+        setAlert({
+            show: true,
+            message: "LOGOUT SUCCESS!",
+            variant: "success"
+        })
+    }
+
     const valueToShare = {
         formData,
         setFormData,
@@ -67,7 +85,8 @@ function Provider({ children }) {
         showPassword,
         passwordToggle,
         alert,
-        setAlert
+        setAlert,
+        logoutUser
     }
 
     return (

@@ -1,20 +1,29 @@
 import React, { useState, useContext, useRef, useEffect } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import Notification from "../../features/Notification"
-import MenuContext from '../../context/MenuContext'
+import useMenuContext from '../../hooks/useMenuContext'
 import ProfileDropdown from '../common/ProfileDropdown'
 
 import logo from "../../assets/images/Logo-RMS.png"
 import Avatar from "../../assets/images/image-sl.png"
-import Setting from "../../assets/svg/tertiary.svg"
-import NotificationIcon from "../../assets/svg/notification.svg"
+import { ReactComponent as Setting } from "../../assets/svg/tertiary.svg"
+import { ReactComponent as NotificationIcon } from "../../assets/svg/notification.svg"
 import "./navbar.css"
 
 const Navbar = () => {
 
-    const { isNotificationOpen, setIsNotificationOpen } = useContext(MenuContext);
+
+    const { 
+        isNotificationOpen, 
+        setIsNotificationOpen,
+        isSettingOpen,
+        setIsSettingOpen,
+        openSettingConfiguration
+     } = useMenuContext();
     const [isProfileOpen, setIsProfileOpen] = useState(false);
+
     const profileRef = useRef(null);
+    const notificationRef = useRef(null);
 
     useEffect(() => {
         const handleClickOutside = (event) => {
@@ -23,6 +32,12 @@ const Navbar = () => {
                 !profileRef.current.contains(event.target)
             ) {
                 setIsProfileOpen(false);
+            }
+            if (
+                notificationRef.current &&
+                !notificationRef.current.contains(event.target)
+            ) {
+                setIsNotificationOpen(false);
             }
         };
 
@@ -73,17 +88,14 @@ const Navbar = () => {
             </nav>
             <div className="d-flex align-items-center justify-content-end gap-3 right-container mobile-only">
                 <div className="icon-wrapper">
-                    <img
-                        src={Setting}
-                        alt="Settings"
+                    <Setting
                         className="setting-icon"
-                        onClick={() => alert("Settings clicked")}
+                        onClick={openSettingConfiguration}
                     />
                 </div>
 
                 <div className="notification-icon-box">
-                    <img
-                        src={NotificationIcon}
+                    <NotificationIcon
                         alt="Notifications"
                         className="notification-icon"
                         onClick={() => {
@@ -97,13 +109,15 @@ const Navbar = () => {
                     </span>
 
                     {isNotificationOpen && (
-                        <Notification />
+                        <div ref={notificationRef}>
+                            <Notification />
+                        </div>
                     )}
                 </div>
 
                 <div ref={profileRef} className="position-relative">
                     <div
-                        className="profile-container"
+                        className="profile-container d-flex align-items-center gap-3"
                         onClick={() => setIsProfileOpen(true)}
                     >
                         <p>Wali.M</p>

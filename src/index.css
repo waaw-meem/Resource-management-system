@@ -259,3 +259,58 @@ body {
   background: #dbeafe;
   color: #1d4ed8;
 }
+
+/* ==========================================
+   LIGHT THEME (Default)
+========================================== */
+
+.light-theme {
+  --navbar-container-bg: #ffffff;
+  --layout-bg: #ffffff;
+  --surface-bg: #ffffff;
+
+  --navbar-bg: #ffffff;
+  --navbar-text: #555555;
+  --navbar-hover-bg: #f1f1f1;
+  --navbar-hover-text: #555555;
+
+  --navbar-active-bg: #EAEAFF;
+  --navbar-active-text: #03045E;
+
+  --notification-counter-bg: var(--danger);
+  --notification-counter-text: var(--text-white);
+
+  --navbar-divider: #D1D1D1;
+
+  --icon-color: #03045E;
+
+  --shadow-color: 0px 4px 12px rgba(0,0,0,.08);
+}
+
+/* ==========================================
+   DARK THEME
+========================================== */
+
+.dark-theme {
+
+   --navbar-container-bg: #050505;
+
+  --layout-bg: #0F172A;
+  --surface-bg: #1E293B;
+
+  --navbar-bg: #111827;
+  --navbar-text: #CBD5E1;
+  --navbar-hover-bg: #111111;
+  --navbar-hover-text: #FFFFFF;
+  --notification-counter-bg: var(--danger);
+  --notification-counter-text: var(--text-white);
+
+  --navbar-active-bg: #111111;
+  --navbar-active-text: #FFFFFF;
+
+  --navbar-divider: #ffffff;
+
+  --icon-color: #FFFFFF;
+
+  --shadow-color: 0px 8px 20px rgba(0,0,0,.35);
+}

@@ -9,7 +9,7 @@
 
 .nav-link {
     text-decoration: none;
-    color: #555;
+    color: var(--navbar-text) !important;
     font-size: 16px;
     font-weight: 500;
     padding: 8px 12px !important;
@@ -18,13 +18,13 @@
 }
 
 .nav-link:hover {
-    background-color: #f1f1f1;
-    color: #0d6efd;
+    background: var(--navbar-hover-bg) !important;
+    color: var(--navbar-hover-text) !important;
 }
 
 .active-link {
-    background-color: #EAEAFF !important;
-    color: #03045E !important;
+    background-color: var(--navbar-active-bg) !important;
+    color: var(--navbar-active-text) !important;
     font-weight: 600 !important;
 }
 
@@ -42,8 +42,8 @@
     position: absolute;
     top: 0;
     right: 15px;
-    background-color: #ff0000;
-    color: #fff;
+    background-color: var(--notification-counter-bg);
+    color: var(--notification-counter-text);
     width: 12px;
     border-radius: 50%;
     height: 12px;
@@ -57,11 +57,12 @@
 
 .notification-icon-box::after {
     content: "";
-    background: #D1D1D1;
+    background: var(--navbar-divider);
     position: absolute;
     height: 100%;
     width: 3px;
     right: 0;
+    top: 0;
     border-radius: 10px;
 }
 
@@ -71,9 +72,11 @@
 
 .profile-container p {
     margin: 0;
+    color: var(--navbar-text);
 }
 
 .navbar-container {
+    background-color: var(--navbar-container-bg);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -86,10 +89,13 @@
     background: none;
     font-size: 28px;
     cursor: pointer;
-    color: #03045E;
+    color: var(--navbar-text);
 }
 
-
+.setting-icon path,
+.notification-icon path{
+    fill:var(--icon-color) !important;
+}
 @media (max-width: 768px) {
 
     .navbar-container {

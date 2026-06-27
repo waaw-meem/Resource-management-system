@@ -5,10 +5,18 @@ const MenuContext = createContext();
 const MenuProvider = ({ children }) => {
 
     const [isNotificationOpen, setIsNotificationOpen] = useState(false);
+    const [isSettingOpen, setIsSettingOpen] = useState(false);
+
+    const openSettingConfiguration = () => {
+        setIsSettingOpen(!isSettingOpen);
+    }
 
     const valueToShare = {
         isNotificationOpen,
-        setIsNotificationOpen
+        setIsNotificationOpen,
+        isSettingOpen,
+        setIsSettingOpen,
+        openSettingConfiguration
     };
 
     return (
