@@ -1,9 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from "react-router-dom";
-import { Provider } from './context/Logincontext';
+import { LoginProvider } from './context/Logincontext';
 import { MenuProvider } from './context/MenuContext';
 import { ThemeProvider } from './context/ThemeContext';
+import { Provider } from 'react-redux';
+import { store } from './store/App';
 import App from './App';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -14,14 +16,16 @@ import ThemeContext from './context/ThemeContext';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
-  <BrowserRouter>
-    <Provider>
-      <MenuProvider>
-        <ThemeProvider>
-          <App />
-        </ThemeProvider>
-      </MenuProvider>
-    </Provider>
-  </BrowserRouter>
+   <Provider store={store}>
+    <BrowserRouter>
+      <LoginProvider>
+        <MenuProvider>
+          <ThemeProvider>
+            <App />
+          </ThemeProvider>
+        </MenuProvider>
+      </LoginProvider>
+    </BrowserRouter>
+  </Provider>
 );
 

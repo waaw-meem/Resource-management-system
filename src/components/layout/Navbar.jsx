@@ -12,14 +12,14 @@ import "./navbar.css"
 
 const Navbar = () => {
 
-
-    const { 
-        isNotificationOpen, 
+    const {
+        isNotificationOpen,
         setIsNotificationOpen,
         isSettingOpen,
         setIsSettingOpen,
         openSettingConfiguration
-     } = useMenuContext();
+    } = useMenuContext();
+    
     const [isProfileOpen, setIsProfileOpen] = useState(false);
 
     const profileRef = useRef(null);

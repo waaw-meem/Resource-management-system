@@ -1,61 +1,69 @@
 {
+  "users": [
+    {
+      "id": "1",
+      "username": "admin@admin.com",
+      "password": "admin123",
+      "rememberMe": false
+    }
+  ],
   "configurations": [
     {
-      "id": 1,
+      "id": "1",
       "title": "Manage Stacks",
       "description": "Add/Remove/Edit list of Stacks",
       "icon": "stacks"
     },
     {
-      "id": 2,
+      "id": "2",
       "title": "Manage Awards",
       "description": "Add/Remove/Edit list of Awards",
       "icon": "awards"
     },
     {
-      "id": 3,
+      "id": "3",
       "title": "Manage Events",
       "description": "Add/Remove/Edit list of Events",
       "icon": "events"
     },
     {
-      "id": 4,
+      "id": "4",
       "title": "Designations",
       "description": "Add/Remove/Edit Designation",
       "icon": "designation"
     },
     {
-      "id": 5,
+      "id": "5",
       "title": "Managers",
       "description": "Add/Remove/Edit Managers",
       "icon": "manager"
     },
     {
-      "id": 6,
+      "id": "6",
       "title": "Regions",
       "description": "Add/Remove/Edit Regions",
       "icon": "region"
     },
     {
-      "id": 7,
+      "id": "7",
       "title": "Locations",
       "description": "Add/Remove/Edit Locations",
       "icon": "location"
     },
     {
-      "id": 8,
+      "id": "8",
       "title": "Manage Clients",
       "description": "Add/Remove/Edit Clients",
       "icon": "client"
     },
     {
-      "id": 9,
+      "id": "9",
       "title": "View Logs",
       "description": "Log activities performed",
       "icon": "logs"
     },
     {
-      "id": 10,
+      "id": "10",
       "title": "Deleted Items",
       "description": "View all deleted items",
       "icon": "deleted"
@@ -63,7 +71,7 @@
   ],
   "notifications": [
     {
-      "id": 1,
+      "id": "1",
       "image": "/images/user1.png",
       "title": "New User Just Added",
       "subText": "Added by Abdul Rehman",
@@ -71,7 +79,7 @@
       "status": "new"
     },
     {
-      "id": 2,
+      "id": "2",
       "image": "/images/user2.png",
       "title": "Request to edit user",
       "subText": "Requested by Umar Aslam",
@@ -79,13 +87,13 @@
       "status": "approval"
     },
     {
-      "id": 3,
+      "id": "3",
       "image": "/images/user3.png",
       "title": "Request to delete user",
       "subText": "Requested by Usama",
       "time": "1 Hour ago",
       "status": "normal"
     }
-  ]
-
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }

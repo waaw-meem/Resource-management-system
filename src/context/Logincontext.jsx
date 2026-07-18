@@ -1,10 +1,13 @@
 import { createContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useGetUserQuery, useQueryLoginMutation } from "../store/slices/AuthSlice";
 
 
 const LoginContext = createContext()
 
-function Provider({ children }) {
+function LoginProvider({ children }) {
+    const { data: users, isLoading, isError } = useGetUserQuery()
+    
     const navigate = useNavigate();
 
     const [alert, setAlert] = useState({
@@ -21,43 +24,58 @@ function Provider({ children }) {
         rememberMe: false
     })
 
+    const [queryLogin] = useQueryLoginMutation()
+
     const handleSubmit = (e) => {
-        e.preventDefault()
-        console.log("data object", formData)
+        e.preventDefault();
 
-        if (
-            formData.username === 'admin@admin.com'
-            && formData.password === 'admin123') {
-            if (formData.rememberMe === true) {
+        if (!formData.username || !formData.password) {
+            setAlert({
+                show: true,
+                message: "Please enter username and password!",
+                variant: "danger",
+            });
+            return;
+        }
+
+        const loginUser = users?.find(
+            (user) =>
+                user.username === formData.username &&
+                user.password === formData.password
+        );
+
+        if (loginUser) {
+
+            if (formData.rememberMe) {
                 sessionStorage.setItem("isAuthenticated", "true");
-                sessionStorage.setItem('name', formData.username)
-                sessionStorage.setItem('password', formData.password)
+                sessionStorage.setItem("username", loginUser.username);
+                sessionStorage.setItem("password", loginUser.password);
             }
-            localStorage.setItem("isAuthenticated", "true");
 
-            localStorage.setItem('name', formData.username)
-            localStorage.setItem('password', formData.password)
+            localStorage.setItem("isAuthenticated", "true");
+            localStorage.setItem("name", loginUser.username);
+            localStorage.setItem("password", loginUser.password);
 
             setAlert({
                 show: true,
                 message: "LOGIN SUCCESS!",
-                variant: "success"
-            })
+                variant: "success",
+            });
 
             setTimeout(() => {
-                navigate('/dashboard');
-            }, 3000);
+                navigate("/dashboard");
+            }, 2000);
+
         } else {
 
             setAlert({
                 show: true,
                 message: "LOGIN FAILED!",
-                variant: "danger"
-            })
+                variant: "danger",
+            });
 
         }
-
-    }
+    };
 
     const passwordToggle = () => {
         setShowPassword(!showPassword)
@@ -96,5 +114,5 @@ function Provider({ children }) {
     );
 }
 
-export { Provider };
+export { LoginProvider };
 export default LoginContext;
