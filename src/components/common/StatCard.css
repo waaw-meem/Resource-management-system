@@ -1,0 +1,54 @@
+.stat-icon{
+
+    width:72px;
+    height:72px;
+
+    border-radius:12px;
+
+    background:#7516C6;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    color:#fff;
+
+    font-size:34px;
+
+}
+
+.stat-pool{
+
+    width:72px;
+    height:72px;
+
+    border-radius:12px;
+
+    background:#4CC9F0;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    color:#fff;
+
+    font-size:34px;
+
+}
+
+.stat-card h2{
+
+    font-size:32px;
+    font-weight:700;
+    margin:0;
+    line-height:1;
+
+}
+
+.stat-card p{
+
+    margin:5px 0 0 0;
+    font-size:16px;
+    color:#555;
+
+}

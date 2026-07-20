@@ -95,5 +95,248 @@
       "status": "normal"
     }
   ],
-  "$schema": "./node_modules/json-server/schema.json"
+  "resources": [
+    {
+      "id": "1",
+      "employeeId": "10001",
+      "name": "Abdul Rehman",
+      "manager": "Ahmed Khan",
+      "department": "Development",
+      "stack": "React",
+      "location": "Karachi",
+      "project": "Etisalat Portal",
+      "billingInfo": "Billable"
+    },
+    {
+      "id": "2",
+      "employeeId": "10002",
+      "name": "Usama Ali",
+      "manager": "Ahmed Khan",
+      "department": "Development",
+      "stack": "Angular",
+      "location": "Karachi",
+      "project": "PCFC Dashboard",
+      "billingInfo": "Billable"
+    },
+    {
+      "id": "3",
+      "employeeId": "10003",
+      "name": "Hassan Raza",
+      "manager": "Bilal Sheikh",
+      "department": "Development",
+      "stack": "React",
+      "location": "Lahore",
+      "project": "AI.Now Portal",
+      "billingInfo": "Partial"
+    },
+    {
+      "id": "4",
+      "employeeId": "10004",
+      "name": "Umar Aslam",
+      "manager": "Bilal Sheikh",
+      "department": "Development",
+      "stack": "React",
+      "location": "Islamabad",
+      "project": "HRMS",
+      "billingInfo": "Bench"
+    },
+    {
+      "id": "5",
+      "employeeId": "10005",
+      "name": "Saad Ahmed",
+      "manager": "Ali Raza",
+      "department": "Development",
+      "stack": "UI Developers",
+      "location": "Karachi",
+      "project": "CRM System",
+      "billingInfo": "Billable"
+    },
+    {
+      "id": "6",
+      "employeeId": "10006",
+      "name": "Muneeb Tariq",
+      "manager": "Ali Raza",
+      "department": "Development",
+      "stack": "UI Developers",
+      "location": "Lahore",
+      "project": "Customer Portal",
+      "billingInfo": "Shadow"
+    },
+    {
+      "id": "7",
+      "employeeId": "10007",
+      "name": "Hamza Iqbal",
+      "manager": "Sara Ahmed",
+      "department": "Development",
+      "stack": "Angular",
+      "location": "Karachi",
+      "project": "Digital Banking",
+      "billingInfo": "Billable"
+    },
+    {
+      "id": "8",
+      "employeeId": "10008",
+      "name": "Ayesha Noor",
+      "manager": "Sara Ahmed",
+      "department": "Development",
+      "stack": "GTM Developers",
+      "location": "Lahore",
+      "project": "Design System",
+      "billingInfo": "Billable"
+    },
+    {
+      "id": "9",
+      "employeeId": "10009",
+      "name": "Fatima Khan",
+      "manager": "Sara Ahmed",
+      "department": "Development",
+      "stack": "GTM Developers",
+      "location": "Islamabad",
+      "project": "Healthcare Portal",
+      "billingInfo": "Partial"
+    },
+    {
+      "id": "10",
+      "employeeId": "10010",
+      "name": "Zain Ali",
+      "manager": "Ahmed Khan",
+      "department": "Development",
+      "stack": "React",
+      "location": "Karachi",
+      "project": "E-Commerce Platform",
+      "billingInfo": "Billable"
+    },
+    {
+      "id": "11",
+      "employeeId": "10011",
+      "name": "Danish Malik",
+      "manager": "Ali Raza",
+      "department": "Development",
+      "stack": "UI Developers",
+      "location": "Islamabad",
+      "project": "AI Analytics",
+      "billingInfo": "Billable"
+    },
+    {
+      "id": "12",
+      "employeeId": "10012",
+      "name": "Hira Siddiqui",
+      "manager": "Bilal Sheikh",
+      "department": "Development",
+      "stack": "UI Developers",
+      "location": "Karachi",
+      "project": "Testing Suite",
+      "billingInfo": "Bench"
+    },
+    {
+      "id": "13",
+      "employeeId": "10013",
+      "name": "Mohsin Raza",
+      "manager": "Ahmed Khan",
+      "department": "Development",
+      "stack": "GTM Developers",
+      "location": "Lahore",
+      "project": "Cloud Migration",
+      "billingInfo": "Billable"
+    },
+    {
+      "id": "14",
+      "employeeId": "10014",
+      "name": "Sana Tariq",
+      "manager": "Sara Ahmed",
+      "department": "Development",
+      "stack": "UI Developers",
+      "location": "Karachi",
+      "project": "Mobile Banking",
+      "billingInfo": "Shadow"
+    },
+    {
+      "id": "15",
+      "employeeId": "10015",
+      "name": "Talha Javed",
+      "manager": "Ali Raza",
+      "department": "Development",
+      "stack": "React",
+      "location": "Islamabad",
+      "project": "Resource Management",
+      "billingInfo": "Billable"
+    },
+    {
+      "id": "16",
+      "employeeId": "10016",
+      "name": "Maryam Noor",
+      "manager": "Bilal Sheikh",
+      "department": "Development",
+      "stack": "Angular",
+      "location": "Karachi",
+      "project": "Finance Portal",
+      "billingInfo": "Partial"
+    },
+    {
+      "id": "17",
+      "employeeId": "10017",
+      "name": "Jawad Hussain",
+      "manager": "Ahmed Khan",
+      "department": "Development",
+      "stack": "GTM Developers",
+      "location": "Lahore",
+      "project": "Executive Dashboard",
+      "billingInfo": "Billable"
+    },
+    {
+      "id": "18",
+      "employeeId": "10018",
+      "name": "Ammar Farooq",
+      "manager": "Ahmed Khan",
+      "department": "Studio",
+      "stack": "UI Designer",
+      "location": "Karachi",
+      "project": "Customer Self Service Portal",
+      "billingInfo": "Billable"
+    },
+    {
+      "id": "19",
+      "employeeId": "10019",
+      "name": "Iqra Nadeem",
+      "manager": "Sara Ahmed",
+      "department": "Studio",
+      "stack": "UX Design",
+      "location": "Lahore",
+      "project": "Corporate Website Redesign",
+      "billingInfo": "Billable"
+    },
+    {
+      "id": "20",
+      "employeeId": "10020",
+      "name": "Shahzaib Khan",
+      "manager": "Bilal Sheikh",
+      "department": "Studio",
+      "stack": "UX Strategy",
+      "location": "Islamabad",
+      "project": "Employee Management System",
+      "billingInfo": "Shadow"
+    },
+    {
+      "id": "21",
+      "employeeId": "10021",
+      "name": "Maham Ali",
+      "manager": "Ali Raza",
+      "department": "Studio",
+      "stack": "UI Design",
+      "location": "Karachi",
+      "project": "Healthcare Mobile App",
+      "billingInfo": "Partial"
+    },
+    {
+      "id": "22",
+      "employeeId": "10022",
+      "name": "Khurram Shah",
+      "manager": "Ahmed Khan",
+      "department": "Studio",
+      "stack": "UX Design",
+      "location": "Lahore",
+      "project": "Marketing Automation Platform",
+      "billingInfo": "Billable"
+    }
+  ]
 }

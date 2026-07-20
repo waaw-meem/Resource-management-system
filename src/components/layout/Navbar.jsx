@@ -17,10 +17,12 @@ const Navbar = () => {
         setIsNotificationOpen,
         isSettingOpen,
         setIsSettingOpen,
-        openSettingConfiguration
+        openSettingConfiguration,
+        isProfileOpen,
+        setIsProfileOpen
     } = useMenuContext();
     
-    const [isProfileOpen, setIsProfileOpen] = useState(false);
+    // const [isProfileOpen, setIsProfileOpen] = useState(false);
 
     const profileRef = useRef(null);
     const notificationRef = useRef(null);
@@ -99,7 +101,6 @@ const Navbar = () => {
                         alt="Notifications"
                         className="notification-icon"
                         onClick={() => {
-                            console.log("clicked");
                             setIsNotificationOpen(!isNotificationOpen);
                         }}
                     />

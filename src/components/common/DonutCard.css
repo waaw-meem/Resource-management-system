@@ -1,0 +1,53 @@
+.resource-card{
+
+    display:grid;
+
+    grid-template-columns:130px 1fr;
+
+    gap:18px;
+
+    align-items:center;
+
+    margin-top:24px;
+
+}
+
+.card-title{
+
+    font-size:18px;
+    font-weight:700;
+
+}
+
+.legend{
+
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+
+}
+
+.legend-item{
+
+    display:flex;
+    align-items:center;
+    gap:10px;
+
+}
+
+
+.legend-color{
+
+    width:18px;
+    height:10px;
+    border-radius:3px;
+
+}
+
+.legend-label{
+    font-size:14px;
+}
+
+.legend-area {
+    justify-self: end;
+}

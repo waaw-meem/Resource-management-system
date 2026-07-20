@@ -1,0 +1,141 @@
+
+
+.stepper {
+
+    display: flex;
+    align-items: center;
+
+    padding: 20px 24px;
+
+    border-bottom: 1px solid #ECEEF5;
+
+    background: #fff;
+
+}
+
+
+
+
+.step {
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    flex-shrink: 0;
+
+}
+
+
+.step-circle {
+
+    width: 38px;
+    height: 38px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 2px solid #BFC5D2;
+
+    background: #fff;
+
+    color: #555;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    transition: .3s;
+
+}
+
+
+.step-circle.completed {
+
+    background: #090A72;
+
+    border-color: #090A72;
+
+    color: #fff;
+
+}
+
+.step-circle.active {
+
+    background: #090A72;
+
+    border-color: #090A72;
+
+    color: #fff;
+
+}
+
+
+.step-title {
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+    color: #333;
+
+    white-space: nowrap;
+
+}
+
+
+.step-line {
+
+    flex: 1;
+
+    height: 2px;
+
+    margin: 0 18px;
+
+    background: #D7DBE5;
+
+    border-radius: 50px;
+
+}
+
+
+.line-active {
+
+    background: #090A72;
+
+}
+
+
+@media (max-width:768px) {
+
+    .stepper {
+
+        padding: 16px;
+
+    }
+
+    .step-title {
+
+        font-size: 13px;
+
+    }
+
+    .step-circle {
+
+        width: 34px;
+        height: 34px;
+
+        font-size: 14px;
+
+    }
+
+    .step-line {
+
+        margin: 0 12px;
+
+    }
+
+}

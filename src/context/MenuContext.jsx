@@ -7,6 +7,8 @@ const MenuProvider = ({ children }) => {
     const [isNotificationOpen, setIsNotificationOpen] = useState(false);
     const [isSettingOpen, setIsSettingOpen] = useState(false);
 
+    const [isProfileOpen, setIsProfileOpen] = useState(false);
+
     const openSettingConfiguration = () => {
         setIsSettingOpen(!isSettingOpen);
     }
@@ -16,7 +18,9 @@ const MenuProvider = ({ children }) => {
         setIsNotificationOpen,
         isSettingOpen,
         setIsSettingOpen,
-        openSettingConfiguration
+        openSettingConfiguration,
+        isProfileOpen,
+        setIsProfileOpen
     };
 
     return (

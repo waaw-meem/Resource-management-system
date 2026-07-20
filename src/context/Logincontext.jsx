@@ -1,6 +1,6 @@
 import { createContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { useGetUserQuery, useQueryLoginMutation } from "../store/slices/AuthSlice";
+import { useGetUserQuery } from "../store/slices/AuthSlice";
 
 
 const LoginContext = createContext()
@@ -24,7 +24,6 @@ function LoginProvider({ children }) {
         rememberMe: false
     })
 
-    const [queryLogin] = useQueryLoginMutation()
 
     const handleSubmit = (e) => {
         e.preventDefault();

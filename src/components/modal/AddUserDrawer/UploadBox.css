@@ -1,0 +1,205 @@
+
+
+.upload-box {
+
+    position: relative;
+
+    width: 100%;
+    min-height: 220px;
+
+    border: 2px dashed #D0D5DD;
+    border-radius: 12px;
+
+    background: #FCFCFD;
+
+    transition: .25s ease;
+
+    cursor: pointer;
+
+    overflow: hidden;
+
+}
+
+
+
+.upload-box:hover {
+
+    border-color: #090A72;
+
+    background: #F8F9FF;
+
+}
+
+
+
+.upload-input {
+
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    opacity: 0;
+
+    cursor: pointer;
+
+    z-index: 2;
+
+}
+
+
+.upload-content {
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 32px;
+
+    height: 100%;
+
+}
+
+
+
+.upload-icon {
+
+    width: 64px;
+    height: 64px;
+
+    border-radius: 50%;
+
+    background: #EEF2FF;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 18px;
+
+}
+
+.upload-icon img {
+
+    width: 28px;
+    height: 28px;
+
+}
+
+
+
+.upload-title {
+
+    margin: 0;
+
+    font-size: 18px;
+    font-weight: 600;
+
+    color: #101828;
+
+}
+
+
+
+.upload-description {
+
+    margin: 10px 0 6px;
+
+    font-size: 14px;
+
+    color: #667085;
+
+    line-height: 22px;
+
+}
+
+
+.upload-formats {
+
+    font-size: 13px;
+
+    color: #98A2B3;
+
+    margin-bottom: 20px;
+
+}
+
+
+
+.browse-btn {
+
+    height: 42px;
+
+    padding: 0 24px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #090A72;
+
+    color: #FFFFFF;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: .25s ease;
+
+}
+
+.browse-btn:hover {
+
+    background: #171A9B;
+
+}
+
+
+@media (max-width:768px){
+
+    .upload-box{
+
+        min-height:190px;
+
+    }
+
+    .upload-content{
+
+        padding:24px;
+
+    }
+
+    .upload-icon{
+
+        width:56px;
+        height:56px;
+
+    }
+
+    .upload-icon img{
+
+        width:24px;
+        height:24px;
+
+    }
+
+    .upload-title{
+
+        font-size:16px;
+
+    }
+
+    .upload-description{
+
+        font-size:13px;
+
+    }
+
+}
