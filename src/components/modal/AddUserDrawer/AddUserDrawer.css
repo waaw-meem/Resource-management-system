@@ -217,15 +217,12 @@
 @media(max-width:768px) {
 
     .drawer {
-
         width: 100%;
-
     }
 
     .drawer-title {
 
         font-size: 20px;
-
     }
 
     .drawer-body {

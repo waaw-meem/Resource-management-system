@@ -6,19 +6,42 @@ import UploadBox from "./UploadBox";
 import useResourceContext from "../../../hooks/useResourceContext"
 
 
-const ProjectDetailsForm = () => {
+const ProjectDetailsForm = ({
+    project,
+    index,
+    onChange,
+    onRemove,
+}) => {
 
     const {
-        handleChange
+        handleChange,
     } = useResourceContext()
     return (
         <div className="project-details-form">
 
             <section className="form-section">
 
-                <h3 className="section-title">
-                    Project Information
-                </h3>
+                <div className="d-flex justify-content-between align-items-center">
+
+                    <h3 className="section-title">
+                        Project {index + 1}
+                    </h3>
+
+                    {
+                        index > 0 && (
+
+                            <button
+                                type="button"
+                                className="btn btn-danger btn-sm"
+                                onClick={() => onRemove(index)}
+                            >
+                                Remove
+                            </button>
+
+                        )
+                    }
+
+                </div>
 
                 <div className="form-grid">
 
@@ -26,7 +49,7 @@ const ProjectDetailsForm = () => {
                         label="Project Name"
                         type="select"
                         required
-                        onChange={handleChange}
+                        onChange={(e) => onChange(index, e)}
                         name="projectName"
                         group="projectDetails"
                     />
@@ -35,7 +58,7 @@ const ProjectDetailsForm = () => {
                         label="Project Manager"
                         type="select"
                         required
-                        onChange={handleChange}
+                        onChange={(e) => onChange(index, e)}
                         name="projectManager"
                         group="projectDetails"
                         options={[
@@ -52,7 +75,7 @@ const ProjectDetailsForm = () => {
                         label="Client"
                         type="select"
                         required
-                        onChange={handleChange}
+                        onChange={(e) => onChange(index, e)}
                         name="client"
                         group="projectDetails"
                         options={[
@@ -69,7 +92,7 @@ const ProjectDetailsForm = () => {
                         label="Allocation"
                         type="select"
                         required
-                        onChange={handleChange}
+                       onChange={(e) => onChange(index, e)}
                         name="allocation"
                         group="projectDetails"
                         options={[
@@ -86,7 +109,7 @@ const ProjectDetailsForm = () => {
                         label="Billing Status"
                         type="select"
                         required
-                        onChange={handleChange}
+                        onChange={(e) => onChange(index, e)}
                         name="billingStatus"
                         group="projectDetails"
                         options={[
@@ -101,6 +124,7 @@ const ProjectDetailsForm = () => {
                         type="select"
                         required
                         name="projectRole"
+                        onChange={(e) => onChange(index, e)}
                         group="projectDetails"
                         options={[
                             "Consultant",
@@ -127,7 +151,7 @@ const ProjectDetailsForm = () => {
                         label="Start Date"
                         type="date"
                         required
-                        onChange={handleChange}
+                        onChange={(e) => onChange(index, e)}
                         name="startDate"
                         group="projectDetails"
 
@@ -136,7 +160,7 @@ const ProjectDetailsForm = () => {
                     <FormField
                         label="End Date"
                         type="date"
-                        onChange={handleChange}
+                        onChange={(e) => onChange(index, e)}
                         name="endDate"
                         group="projectDetails"
                     />
@@ -145,7 +169,7 @@ const ProjectDetailsForm = () => {
                         label="Working Hours"
                         type="number"
                         placeholder="8"
-                        onChange={handleChange}
+                        onChange={(e) => onChange(index, e)}
                         name="workingHours"
                         group="projectDetails"
                     />
@@ -154,7 +178,7 @@ const ProjectDetailsForm = () => {
                         label="Utilization (%)"
                         type="number"
                         placeholder="100"
-                        onChange={handleChange}
+                        onChange={(e) => onChange(index, e)}
                         name="utilization"
                         group="projectDetails"
                     />
@@ -175,7 +199,7 @@ const ProjectDetailsForm = () => {
                     type="file"
                     name="documents"
                     group="projectDetails"
-                    onChange={handleChange}
+                    onChange={(e) => onChange(index, e)}
                     title="Upload Project Documents"
                     description="Drag & Drop files here or click to browse"
                     supportedFormats="PDF, DOCX, XLSX (Max 10 MB)"
@@ -194,7 +218,7 @@ const ProjectDetailsForm = () => {
                     label="Comments"
                     type="textarea"
                     placeholder="Write project comments here..."
-                    onChange={handleChange}
+                    onChange={(e) => onChange(index, e)}
                     name="comments"
                     group="projectDetails"
                 />

@@ -3,21 +3,22 @@ import "./AddUserDrawer.css";
 import useResourceContext from "../../../hooks/useResourceContext";
 import Stepper from "./Stepper";
 import UserDetailsForm from "./UserDetailsForm";
-import ProjectDetailsForm from "./ProjectDetailsForm";
 
 import CloseIcon from "../../../assets/svg/close.svg"
+import ProjectDetailSection from "./ProjectDetailSection";
 
 const AddUserDrawer = ({
     open,
     onClose,
-   
+
 }) => {
 
     const {
         currentStep,
         handleSubmit,
         goNextStep,
-        goPrevStep
+        goPrevStep,
+        addProject
     } = useResourceContext();
 
     if (!open) return null;
@@ -51,7 +52,7 @@ const AddUserDrawer = ({
                     )}
 
                     {currentStep === 2 && (
-                        <ProjectDetailsForm />
+                        <ProjectDetailSection />
                     )}
 
                 </div>
@@ -72,13 +73,21 @@ const AddUserDrawer = ({
                         </>
                     ) : (
                         <>
+
+                            <button
+                                className="btn-primary"
+                                onClick={addProject}
+                            >
+                                + Add New Project
+                            </button>
                             <button className="btn-outline" onClick={goPrevStep}>
                                 ← Back
                             </button>
 
-                            <button className="btn-primary">
+                            <button className="btn-primary" onClick={handleSubmit}>
                                 Save
                             </button>
+
                         </>
                     )}
 

@@ -1,9 +1,30 @@
-import React, { useState } from 'react'
+import React from "react";
+import useResourceContext from "../../../hooks/useResourceContext";
+import ProjectDetailsForm from "./ProjectDetailsForm";
 
 const ProjectDetailSection = () => {
-    return (
-        <div>ProjectDetailSection</div>
-    )
-}
 
-export default ProjectDetailSection
+    const {
+        formData,
+        handleProjectChange,
+        removeProject,
+    } = useResourceContext();
+
+    return (
+        <>
+            {formData.projectDetails.map((project, index) => (
+
+                <ProjectDetailsForm
+                    key={index}
+                    project={project}
+                    index={index}
+                    onChange={handleProjectChange}
+                    onRemove={removeProject}
+                />
+
+            ))}
+        </>
+    );
+};
+
+export default ProjectDetailSection;
