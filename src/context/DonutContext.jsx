@@ -1,4 +1,4 @@
-import React, { createContext, useMemo, useState } from "react";
+import React, { createContext, useMemo } from "react";
 import { useGetResourcesQuery } from "../store/slices/Resources";
 
 const DonutContext = createContext();
@@ -10,26 +10,26 @@ function DonutProvider({ children }) {
 
     const developmentResources = useMemo(() => {
         return resources?.filter(
-            (resource) => resource.department === "Development"
+            (resource) => resource.userDetails.organizationDetails.department === "Digital Consulting Developement"
         ) || [];
     }, [resources]);
 
     const studioResources = useMemo(() => {
         return resources?.filter(
-            (resource) => resource.department === "Studio"
+            (resource) => resource.userDetails.organizationDetails.department === "Studio"
         ) || [];
     }, [resources]);
 
     const developmentCount = useMemo(() => {
         return developmentResources.reduce((acc, resource) => {
-            acc[resource.stack] = (acc[resource.stack] || 0) + 1;
+            acc[resource.userDetails.organizationDetails.stack] = (acc[resource.userDetails.organizationDetails.stack] || 0) + 1;
             return acc;
         }, {});
     }, [developmentResources]);
 
     const studioCount = useMemo(() => {
         return studioResources.reduce((acc, resource) => {
-            acc[resource.stack] = (acc[resource.stack] || 0) + 1;
+            acc[resource.userDetails.organizationDetails.stack] = (acc[resource.userDetails.organizationDetails.stack] || 0) + 1;
             return acc;
         }, {});
     }, [studioResources]);

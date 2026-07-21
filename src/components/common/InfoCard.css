@@ -24,9 +24,10 @@
     border: 1px solid #E8EAF2;
 
     box-shadow:
-        0 6px 18px rgba(18,38,63,.06);
+        0 6px 18px rgba(18, 38, 63, .06);
 
     height: 100%;
+    margin-bottom: 24px;
 }
 
 .stat-card {
@@ -37,33 +38,37 @@
     min-height: 118px;
 }
 
-.chart-card{
-    min-height:420px;
+.chart-card {
+    min-height: 420px;
 }
 
-@media (max-width:1200px){
+.table-grid {
+    box-shadow: 0 0 10px #3333;
+}
 
-.dashboard-grid{
+@media (max-width:1200px) {
 
-    grid-template-columns:1fr;
+    .dashboard-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .stats-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
 
 }
 
-.stats-grid{
 
-    grid-template-columns:repeat(2,1fr);
+@media (max-width:768px) {
 
-}
+    .stats-grid {
 
-}
+        grid-template-columns: 1fr;
 
-
-@media (max-width:768px){
-
-.stats-grid{
-
-    grid-template-columns:1fr;
-
-}
+    }
 
 }

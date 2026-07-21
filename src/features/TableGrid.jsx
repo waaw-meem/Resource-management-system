@@ -1,4 +1,3 @@
-import React, { useState } from 'react'
 import SearchField from '../components/common/SearchField'
 import PrimaryHeader from '../components/common/PrimaryHeader'
 import Button from '../components/common/Button'
@@ -12,7 +11,6 @@ const TableGrid = () => {
 
     const {
         searchValue,
-        setSearchValue,
         handleOnChange,
         openAddResourceModal,
         closeAddResourceModal,
@@ -22,7 +20,7 @@ const TableGrid = () => {
     return (
         <>
             <PrimaryHeader title="Resources" />
-            <div className="table-grid p-4">
+            <div className="table-grid p-4 bg-light mt-4 rounded-4">
                 <div className="d-flex justify-content-between align-items-center mb-3">
                     <SearchField
                         placeholder="Search by Attribute"

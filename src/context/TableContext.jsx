@@ -1,4 +1,4 @@
-import react, { createContext, useState } from 'react'
+import { createContext, useState } from 'react'
 
 const TableContext = createContext()
 
@@ -6,21 +6,15 @@ const TableProvider = ({ children }) => {
 
     const [searchValue, setSearchValue] = useState('')
     const [openModal, setOpenModal] = useState(false)
-    // const [filterModalOpen, setFilterModalOpen] = useState(false)
 
     const handleOnChange = (e) => {
-        console.log(e.target.value)
+        // console.log(e.target.value)
         setSearchValue(e.target.value)
     }
 
     const openAddResourceModal = () => {
         setOpenModal(true)
     }
-
-    // const openFilterModal = () => {
-    //     setFilterModalOpen(true)
-    // }
-
 
     const valueToShare = {
         searchValue,
