@@ -6,8 +6,15 @@ export const resourcesApi = createApi({
     endpoints: (builder) => ({
         getResources: builder.query({
             query: () => 'resources'
+        }),
+        addUser: builder.mutation({
+            query: (newUser) => ({
+                url: "resources",
+                method: "POST",
+                body: newUser
+            })
         })
     })
 })
 
-export const { useGetResourcesQuery } = resourcesApi
+export const { useGetResourcesQuery, useAddUserMutation } = resourcesApi

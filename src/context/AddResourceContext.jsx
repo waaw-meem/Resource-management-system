@@ -1,8 +1,20 @@
 import { createContext, React, useState } from "react";
+import { useAddUserMutation } from "../store/slices/Resources";
 
 const addResourceContext = createContext()
 
 function ResourceProvider({ children }) {
+
+    const [
+        addUser,
+        {
+            isLoading,
+            isSuccess,
+            isError,
+            error,
+        },
+    ] = useAddUserMutation();
+
     /* ---------------- Stepper ---------------- */
 
     const [currentStep, setCurrentStep] = useState(1);
@@ -176,9 +188,79 @@ function ResourceProvider({ children }) {
 
     /* ---------------- Submit ---------------- */
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log(formData);
+
+        try {
+            const response = await addUser(formData).unwrap();
+
+            console.log("User added successfully:", response);
+
+            alert("Resource added successfully!");
+
+
+            setFormData({
+                userDetails: {
+
+                    basicInformation: {
+                        employeeId: "",
+                        employeeName: "",
+                        email: "",
+                        contactNumber: "",
+                        linkedUrl: "",
+                        designation: "",
+                    },
+
+                    organizationDetails: {
+                        department: "",
+                        manager: "",
+                        location: "",
+                        region: "",
+                        stack: "",
+                        billingInfo: "",
+                    },
+
+                    leaveInformation: {
+                        annualLeave: "",
+                        sickLeave: "",
+                    },
+
+                    uploadDocument: {
+                        file: "",
+                    },
+
+                    additionalInformation: {
+                        comments: "",
+                    },
+
+                },
+
+                projectDetails: [
+                    {
+                        projectName: "",
+                        projectManager: "",
+                        client: "",
+                        allocation: "",
+                        billingStatus: "",
+                        projectRole: "",
+                        startDate: "",
+                        endDate: "",
+                        workingHours: "",
+                        utilization: "",
+                        comments: "",
+                        documents: null,
+                    },
+                ],
+
+            });
+
+        } catch (err) {
+            console.error("Failed to add resource:", err);
+
+            alert(
+                err?.data?.message || "Something went wrong!"
+            );
+        }
     };
 
     /* ---------------- Context ---------------- */
